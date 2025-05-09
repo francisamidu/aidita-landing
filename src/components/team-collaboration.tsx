@@ -1,20 +1,23 @@
-"use client"
+"use client";
 
-import { motion, useScroll, useTransform } from "framer-motion"
-import { useRef } from "react"
+import { motion, useScroll, useTransform } from "motion/react";
+import { useRef } from "react";
 
 const TeamCollaboration = () => {
-  const sectionRef = useRef(null)
+  const sectionRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"],
-  })
+  });
 
-  const y = useTransform(scrollYProgress, [0, 0.5, 1], [100, 0, -100])
-  const opacity = useTransform(scrollYProgress, [0.2, 0.5, 0.8], [0, 1, 0])
+  const y = useTransform(scrollYProgress, [0, 0.5, 1], [100, 0, -100]);
+  const opacity = useTransform(scrollYProgress, [0.2, 0.5, 0.8], [0, 1, 0]);
 
   return (
-    <section ref={sectionRef} className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section
+      ref={sectionRef}
+      className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
+    >
       <motion.div
         className="text-center mb-16"
         initial={{ opacity: 0, y: 20 }}
@@ -35,12 +38,16 @@ const TeamCollaboration = () => {
       <motion.div style={{ y, opacity }} className="relative">
         <div className="bg-gradient-to-r from-blue-500/30 via-indigo-500/30 to-purple-500/30 rounded-lg p-1">
           <div className="bg-gray-900 rounded-lg overflow-hidden border border-gray-800">
-            <img src="/video-editor-collaboration.png" alt="Aidita team collaboration" className="w-full h-auto" />
+            <img
+              src="/video-editor-collaboration.png"
+              alt="Aidita team collaboration"
+              className="w-full h-auto"
+            />
           </div>
         </div>
       </motion.div>
     </section>
-  )
-}
+  );
+};
 
-export default TeamCollaboration
+export default TeamCollaboration;

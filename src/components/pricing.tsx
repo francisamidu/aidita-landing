@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { Check } from "lucide-react"
+import { motion } from "motion/react";
+import { Button } from "@/components/ui/button";
+import { Check } from "lucide-react";
 
 const Pricing = () => {
   const plans = [
@@ -57,10 +57,13 @@ const Pricing = () => {
       popular: false,
       color: "border-gray-800 hover:border-gray-700",
     },
-  ]
+  ];
 
   return (
-    <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section
+      id="pricing"
+      className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
+    >
       <motion.div
         className="text-center mb-16"
         initial={{ opacity: 0, y: 20 }}
@@ -68,15 +71,21 @@ const Pricing = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-3xl font-bold font-manrope">Simple, transparent pricing</h2>
-        <p className="mt-4 text-gray-400 max-w-3xl mx-auto font-rubik">Choose the plan that works for you</p>
+        <h2 className="text-3xl font-bold font-manrope">
+          Simple, transparent pricing
+        </h2>
+        <p className="mt-4 text-gray-400 max-w-3xl mx-auto font-rubik">
+          Choose the plan that works for you
+        </p>
       </motion.div>
 
       <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
         {plans.map((plan, index) => (
           <motion.div
             key={index}
-            className={`bg-gray-900 rounded-lg border-2 ${plan.color} p-8 relative ${plan.popular ? "ring-2 ring-purple-500" : ""}`}
+            className={`bg-gray-900 rounded-lg border-2 ${
+              plan.color
+            } p-8 relative ${plan.popular ? "ring-2 ring-purple-500" : ""}`}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -90,12 +99,20 @@ const Pricing = () => {
             )}
             <h3 className="text-xl font-bold mb-2 font-manrope">{plan.name}</h3>
             <div className="mb-4">
-              <span className="text-4xl font-bold font-manrope">{plan.price}</span>
-              <span className="text-gray-400 ml-2 font-rubik">{plan.period}</span>
+              <span className="text-4xl font-bold font-manrope">
+                {plan.price}
+              </span>
+              <span className="text-gray-400 ml-2 font-rubik">
+                {plan.period}
+              </span>
             </div>
             <p className="text-gray-400 mb-6 font-rubik">{plan.description}</p>
             <Button
-              className={`w-full mb-8 ${plan.popular ? "bg-purple-600 hover:bg-purple-700" : "bg-gray-800 hover:bg-gray-700"} font-rubik`}
+              className={`w-full mb-8 ${
+                plan.popular
+                  ? "bg-purple-600 hover:bg-purple-700"
+                  : "bg-gray-800 hover:bg-gray-700"
+              } font-rubik`}
             >
               {plan.cta}
             </Button>
@@ -111,7 +128,7 @@ const Pricing = () => {
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Pricing
+export default Pricing;

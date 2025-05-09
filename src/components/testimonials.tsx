@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
+import { motion } from "motion/react";
 
 const Testimonials = () => {
   const testimonials = [
@@ -17,7 +17,8 @@ const Testimonials = () => {
       role: "Content Creator",
     },
     {
-      quote: "The team collaboration features are game-changing. Our remote team can now work together seamlessly.",
+      quote:
+        "The team collaboration features are game-changing. Our remote team can now work together seamlessly.",
       author: "Jessica Williams",
       role: "Production Manager, MediaCorp",
     },
@@ -34,14 +35,18 @@ const Testimonials = () => {
       role: "Marketing Director, TechGrowth",
     },
     {
-      quote: "Our agency has cut editing time by 40% since switching to Aidita. The ROI has been incredible.",
+      quote:
+        "Our agency has cut editing time by 40% since switching to Aidita. The ROI has been incredible.",
       author: "Michael Lee",
       role: "Agency Owner, VisualPeak",
     },
-  ]
+  ];
 
   return (
-    <section id="testimonials" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section
+      id="testimonials"
+      className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
+    >
       <motion.div
         className="text-center mb-16"
         initial={{ opacity: 0, y: 20 }}
@@ -49,8 +54,12 @@ const Testimonials = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-3xl font-bold font-manrope">Loved by product people</h2>
-        <p className="mt-4 text-gray-400 max-w-3xl mx-auto font-rubik">See what our users have to say about Aidita</p>
+        <h2 className="text-3xl font-bold font-manrope">
+          Loved by product people
+        </h2>
+        <p className="mt-4 text-gray-400 max-w-3xl mx-auto font-rubik">
+          See what our users have to say about Aidita
+        </p>
       </motion.div>
 
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -64,16 +73,20 @@ const Testimonials = () => {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             whileHover={{ y: -5, transition: { duration: 0.2 } }}
           >
-            <p className="text-gray-300 mb-4 font-rubik">"{testimonial.quote}"</p>
+            <p className="text-gray-300 mb-4 font-rubik">
+              "{testimonial.quote}"
+            </p>
             <div>
               <p className="font-bold font-manrope">{testimonial.author}</p>
-              <p className="text-gray-400 text-sm font-rubik">{testimonial.role}</p>
+              <p className="text-gray-400 text-sm font-rubik">
+                {testimonial.role}
+              </p>
             </div>
           </motion.div>
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Testimonials
+export default Testimonials;

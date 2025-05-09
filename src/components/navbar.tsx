@@ -1,17 +1,19 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Menu, X } from "lucide-react"
-import { motion } from "framer-motion"
+import { useState } from "react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Bars3Icon as Menu, XMarkIcon as X } from "@heroicons/react/24/outline";
+import { motion } from "motion/react";
+import Image from "next/image";
+import aiditaLogo from "@/assets/aidita-logo.svg";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <motion.nav
-      className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-gray-800"
+      className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-md border-b border-gray-800"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
@@ -20,7 +22,12 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
-              <span className="text-xl font-bold font-manrope">Aidita</span>
+              <Image
+                src={aiditaLogo}
+                alt="Aidita Logo"
+                width={120}
+                height={40}
+              />
             </Link>
             <div className="hidden md:ml-10 md:flex md:space-x-8">
               <Link
@@ -29,7 +36,10 @@ const Navbar = () => {
               >
                 Features
               </Link>
-              <Link href="#pricing" className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium font-rubik">
+              <Link
+                href="#pricing"
+                className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium font-rubik"
+              >
                 Pricing
               </Link>
               <Link
@@ -44,7 +54,10 @@ const Navbar = () => {
               >
                 Integrations
               </Link>
-              <Link href="#contact" className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium font-rubik">
+              <Link
+                href="#contact"
+                className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium font-rubik"
+              >
                 Contact
               </Link>
             </div>
@@ -53,14 +66,20 @@ const Navbar = () => {
             <Button variant="link" className="text-gray-300 mr-4 font-rubik">
               Log in
             </Button>
-            <Button className="bg-purple-600 hover:bg-purple-700 font-rubik">Sign up</Button>
+            <Button className="bg-purple-600 hover:bg-purple-700 font-rubik">
+              Sign up
+            </Button>
           </div>
           <div className="flex md:hidden items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
@@ -109,18 +128,23 @@ const Navbar = () => {
           </div>
           <div className="pt-4 pb-3 border-t border-gray-800">
             <div className="flex items-center px-5">
-              <Button variant="link" className="text-gray-300 w-full text-left font-rubik">
+              <Button
+                variant="link"
+                className="text-gray-300 w-full text-left font-rubik"
+              >
                 Log in
               </Button>
             </div>
             <div className="mt-3 px-5 pb-3">
-              <Button className="w-full bg-purple-600 hover:bg-purple-700 font-rubik">Sign up</Button>
+              <Button className="w-full bg-purple-600 hover:bg-purple-700 font-rubik">
+                Sign up
+              </Button>
             </div>
           </div>
         </motion.div>
       )}
     </motion.nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
