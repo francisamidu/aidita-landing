@@ -66,7 +66,7 @@ const Navbar = () => {
             <Button variant="link" className="text-gray-300 mr-4 font-rubik">
               Log in
             </Button>
-            <Button className="bg-purple-600 hover:bg-purple-700 font-rubik">
+            <Button className="bg-indigo-600 hover:bg-indigo-700 !py-1 h-8 font-rubik">
               Sign up
             </Button>
           </div>

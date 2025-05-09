@@ -31,37 +31,190 @@ const LogoCloud = () => {
   ];
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      <motion.div
-        className="grid grid-cols-2 gap-8 md:grid-cols-6"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, staggerChildren: 0.1 }}
-      >
-        {logos.map((logo, index) => (
-          <motion.div
-            key={index}
-            className="flex justify-center"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: index * 0.1 }}
-          >
-            <svg
-              className="h-8 w-auto text-gray-500"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+    <section className="py-14 px-4 sm:px-6 lg:px-8 bg-slate-900/20">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-10">
+          <p className="text-gray-400 text-base font-rubik">
+            These companies trust Aidita
+          </p>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-y-10 gap-x-8 items-center justify-items-center">
+          {/* Pitch */}
+          <svg width="90" height="32" viewBox="0 0 90 32" fill="none">
+            <text
+              x="0"
+              y="24"
+              fontFamily="Manrope, Arial"
+              fontWeight="bold"
+              fontSize="24"
+              fill="white"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={1.5}
-                d={logo.logo}
-              />
-            </svg>
-          </motion.div>
-        ))}
-      </motion.div>
+              Pitch
+            </text>
+          </svg>
+          {/* Dashlane */}
+          <svg width="110" height="32" viewBox="0 0 110 32" fill="none">
+            <text
+              x="0"
+              y="24"
+              fontFamily="Manrope, Arial"
+              fontWeight="bold"
+              fontSize="22"
+              fill="white"
+            >
+              DASHLANE
+            </text>
+          </svg>
+          {/* Epic Games */}
+          <svg width="50" height="32" viewBox="0 0 50 32" fill="none">
+            <rect x="0" y="0" width="50" height="32" rx="6" fill="white" />
+            <text
+              x="25"
+              y="19"
+              textAnchor="middle"
+              fontFamily="Manrope, Arial"
+              fontWeight="bold"
+              fontSize="13"
+              fill="#232323"
+            >
+              EPIC
+            </text>
+            <text
+              x="25"
+              y="29"
+              textAnchor="middle"
+              fontFamily="Manrope, Arial"
+              fontWeight="bold"
+              fontSize="9"
+              fill="#232323"
+            >
+              GAMES
+            </text>
+          </svg>
+          {/* Medium */}
+          <svg width="110" height="32" viewBox="0 0 110 32" fill="none">
+            <text
+              x="0"
+              y="24"
+              fontFamily="Manrope, Arial"
+              fontWeight="bold"
+              fontSize="22"
+              fill="white"
+            >
+              ●● Medium
+            </text>
+          </svg>
+          {/* Star Atlas */}
+          <svg width="120" height="32" viewBox="0 0 120 32" fill="none">
+            <text
+              x="0"
+              y="24"
+              fontFamily="Manrope, Arial"
+              fontWeight="bold"
+              fontSize="22"
+              fill="white"
+            >
+              STAR ATLAS
+            </text>
+          </svg>
+          {/* Census */}
+          <svg width="110" height="32" viewBox="0 0 110 32" fill="none">
+            <circle cx="16" cy="16" r="13" fill="white" />
+            <text
+              x="35"
+              y="24"
+              fontFamily="Manrope, Arial"
+              fontWeight="bold"
+              fontSize="22"
+              fill="white"
+            >
+              Census
+            </text>
+          </svg>
+          {/* Ruter# */}
+          <svg width="90" height="32" viewBox="0 0 90 32" fill="none">
+            <text
+              x="0"
+              y="24"
+              fontFamily="Manrope, Arial"
+              fontWeight="bold"
+              fontSize="22"
+              fill="white"
+            >
+              Ruter#
+            </text>
+          </svg>
+          {/* Comcast Business */}
+          <svg width="140" height="32" viewBox="0 0 140 32" fill="none">
+            <text
+              x="0"
+              y="16"
+              fontFamily="Manrope, Arial"
+              fontWeight="bold"
+              fontSize="15"
+              fill="white"
+            >
+              COMCAST
+            </text>
+            <text
+              x="0"
+              y="32"
+              fontFamily="Manrope, Arial"
+              fontWeight="bold"
+              fontSize="15"
+              fill="white"
+            >
+              BUSINESS
+            </text>
+          </svg>
+          {/* in the Pocket */}
+          <svg width="120" height="32" viewBox="0 0 120 32" fill="none">
+            <text
+              x="0"
+              y="15"
+              fontFamily="Manrope, Arial"
+              fontWeight="bold"
+              fontSize="10"
+              fill="white"
+            >
+              in the
+            </text>
+            <text
+              x="0"
+              y="32"
+              fontFamily="Manrope, Arial"
+              fontWeight="bold"
+              fontSize="22"
+              fill="white"
+            >
+              Pocket
+            </text>
+          </svg>
+          {/* Pelo Studio */}
+          <svg width="110" height="32" viewBox="0 0 110 32" fill="none">
+            <text
+              x="0"
+              y="24"
+              fontFamily="Manrope, Arial"
+              fontWeight="bold"
+              fontSize="22"
+              fill="white"
+            >
+              ●Pelo
+            </text>
+            <text
+              x="60"
+              y="24"
+              fontFamily="Manrope, Arial"
+              fontWeight="bold"
+              fontSize="22"
+              fill="white"
+            >
+              studio
+            </text>
+          </svg>
+        </div>
+      </div>
     </section>
   );
 };
