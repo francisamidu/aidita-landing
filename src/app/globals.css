@@ -135,6 +135,9 @@ body {
     cursor: pointer;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);

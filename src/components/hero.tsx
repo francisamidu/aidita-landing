@@ -9,7 +9,7 @@ const Hero = () => {
     <section className="checker-bg">
       <div className="pt-36 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto ">
         <div className="text-center flex flex-col items-center gap-6">
-          <div className="border border-gray-800 rounded-4xl py-1 px-6 flex items-center gap-2 w-fit bg-gray-800/40 backdrop-blur-sm">
+          <div className="border border-indigo-900 rounded-4xl py-1 px-6 flex items-center gap-2 w-fit bg-indigo-800/10 backdrop-blur-sm">
             <span className="text-indigo-500 font-bold">New!</span>
             <span>We just released the beta version of Aidita</span> 🚀
           </div>
