@@ -10,7 +10,8 @@ const Pricing = () => {
       name: "Basic",
       price: "$19",
       period: "per month",
-      description: "Perfect for individuals and small projects",
+      description:
+        "Perfect for individuals and small projects. Free for 1 month",
       features: [
         "AI-powered editing suggestions",
         "720p video export",
@@ -85,7 +86,7 @@ const Pricing = () => {
             key={index}
             className={`bg-gray-900 rounded-lg border-2 ${
               plan.color
-            } p-8 relative ${plan.popular ? "ring-2 ring-purple-500" : ""}`}
+            } p-8 relative ${plan.popular ? "ring-2 ring-purple-600 " : ""}`}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -93,7 +94,7 @@ const Pricing = () => {
             whileHover={{ y: -5, transition: { duration: 0.2 } }}
           >
             {plan.popular && (
-              <div className="absolute top-0 right-0 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg font-rubik">
+              <div className="absolute -top-1 -right-1 bg-purple-600 text-white text-xs font-manrope font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
                 MOST POPULAR
               </div>
             )}
@@ -114,7 +115,11 @@ const Pricing = () => {
                   : "bg-gray-800 hover:bg-gray-700"
               } font-rubik`}
             >
-              {plan.cta}
+              {plan.popular
+                ? "Get started"
+                : index === 0
+                ? "Try for free"
+                : "Contact sales"}
             </Button>
             <ul className="space-y-3">
               {plan.features.map((feature, featureIndex) => (
