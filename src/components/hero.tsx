@@ -3,6 +3,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRightIcon, PlayIcon } from "@heroicons/react/24/solid";
 import { motion } from "motion/react";
+import Image from "next/image";
+import aiditaImg from "@/assets/aidita-sample.jpg";
 
 const Hero = () => {
   return (
@@ -62,10 +64,12 @@ const Hero = () => {
         >
           <div className="bg-gradient-to-r from-purple-900/20 to-blue-900/20 rounded-lg p-1">
             <div className="bg-gray-900 rounded-lg overflow-hidden border border-gray-800">
-              <img
-                src="/placeholder.svg?key=id048"
+              <Image
+                src={aiditaImg.src}
                 alt="Aidita video editor interface"
                 className="w-full h-auto"
+                width={750}
+                height={750}
               />
             </div>
           </div>
