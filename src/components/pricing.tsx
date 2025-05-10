@@ -38,7 +38,7 @@ const Pricing = () => {
       ],
       cta: "Get started",
       popular: true,
-      color: "border-purple-600 hover:border-purple-500",
+      color: "border-indigo-600 hover:border-indigo-500",
     },
     {
       name: "Enterprise",
@@ -86,7 +86,7 @@ const Pricing = () => {
             key={index}
             className={`bg-gray-900 rounded-lg border-2 ${
               plan.color
-            } p-8 relative ${plan.popular ? "ring-2 ring-purple-600 " : ""}`}
+            } p-8 relative ${plan.popular ? "ring-2 ring-indigo-600 " : ""}`}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -94,7 +94,7 @@ const Pricing = () => {
             whileHover={{ y: -5, transition: { duration: 0.2 } }}
           >
             {plan.popular && (
-              <div className="absolute -top-1 -right-1 bg-purple-600 text-white text-xs font-manrope font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
+              <div className="absolute -top-1 -right-1 bg-indigo-600 text-white text-xs font-manrope font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
                 MOST POPULAR
               </div>
             )}
@@ -111,7 +111,7 @@ const Pricing = () => {
             <Button
               className={`w-full mb-8 ${
                 plan.popular
-                  ? "bg-purple-600 hover:bg-purple-700"
+                  ? "bg-indigo-600 hover:bg-indigo-700"
                   : "bg-gray-800 hover:bg-gray-700"
               } font-rubik`}
             >
