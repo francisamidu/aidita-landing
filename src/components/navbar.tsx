@@ -88,7 +88,7 @@ const Navbar = () => {
       {/* Mobile menu */}
       {isOpen && (
         <motion.div
-          className="md:hidden bg-black border-b border-gray-800"
+          className="md:hidden border-b border-slate-900/20"
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
@@ -136,7 +136,7 @@ const Navbar = () => {
               </Button>
             </div>
             <div className="mt-3 px-5 pb-3">
-              <Button className="w-full bg-purple-600 hover:bg-purple-700 font-rubik">
+              <Button className="w-full bg-indigo-600 hover:bg-indigo-700 font-rubik">
                 Sign up
               </Button>
             </div>
