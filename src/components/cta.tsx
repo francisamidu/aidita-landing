@@ -18,7 +18,7 @@ const Cta = () => {
           whileInView={{ scale: 1, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mx-auto mb-8 w-16 h-16 bg-purple-600 backdrop-blur-3xl shadow-lg shadow-purple-900/20 rounded-full flex items-center justify-center"
+          className="mx-auto mb-8 w-16 h-16 bg-indigo-600 backdrop-blur-3xl shadow-lg shadow-indigo-900/20 rounded-full flex items-center justify-center animate-pulse "
         >
           <svg
             className="h-8 w-8 text-white"
@@ -53,7 +53,7 @@ const Cta = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <Button className="bg-purple-600 hover:bg-purple-700 text-lg px-8 py-6 font-rubik">
+          <Button className="bg-indigo-600 hover:bg-indigo-700 text-lg px-8 py-6 font-rubik">
             Get started for free
           </Button>
         </motion.div>
