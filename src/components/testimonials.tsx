@@ -41,6 +41,24 @@ const Testimonials = () => {
       role: "Agency Owner, VisualPeak",
     },
   ];
+  const getAuthorImage = (author: string) => {
+    switch (author) {
+      case "Sarah Johnson":
+        return "https://randomuser.me/api/portraits/women/32.jpg";
+      case "Mark Chen":
+        return "https://randomuser.me/api/portraits/men/20.jpg";
+      case "Jessica Williams":
+        return "https://randomuser.me/api/portraits/women/35.jpg";
+      case "David Rodriguez":
+        return "https://randomuser.me/api/portraits/men/36.jpg";
+      case "Emma Thompson":
+        return "https://randomuser.me/api/portraits/women/36.jpg";
+      case "Michael Lee":
+        return "https://randomuser.me/api/portraits/men/31.jpg";
+      default:
+        return "https://randomuser.me/api/portraits/men/33.jpg";
+    }
+  };
 
   return (
     <section
@@ -66,21 +84,30 @@ const Testimonials = () => {
         {testimonials.map((testimonial, index) => (
           <motion.div
             key={index}
-            className="bg-gray-900 p-6 rounded-lg border border-gray-800"
+            className="bg-gray-900  rounded-lg border border-gray-800"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             whileHover={{ y: -5, transition: { duration: 0.2 } }}
           >
-            <p className="text-gray-300 mb-4 font-rubik">
+            <p className="text-gray-300 italic mb-4 font-rubik p-6 bg-slate-900/10">
               "{testimonial.quote}"
             </p>
-            <div>
-              <p className="font-bold font-manrope">{testimonial.author}</p>
-              <p className="text-gray-400 text-sm font-rubik">
-                {testimonial.role}
-              </p>
+            <div className="flex items-center gap-4 border-t py-3 px-4 border-gray-800 bg-slate-900/50">
+              <img
+                src={getAuthorImage(testimonial.author)}
+                alt={testimonial.author}
+                width={50}
+                height={50}
+                className="rounded-full"
+              />
+              <div>
+                <p className="font-bold font-manrope">{testimonial.author}</p>
+                <p className="text-gray-400 text-sm font-rubik">
+                  {testimonial.role}
+                </p>
+              </div>
             </div>
           </motion.div>
         ))}
