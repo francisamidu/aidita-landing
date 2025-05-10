@@ -18,7 +18,7 @@ const Cta = () => {
           whileInView={{ scale: 1, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mx-auto mb-8 w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center"
+          className="mx-auto mb-8 w-16 h-16 bg-purple-600 backdrop-blur-3xl shadow-lg shadow-purple-900/20 rounded-full flex items-center justify-center"
         >
           <svg
             className="h-8 w-8 text-white"
@@ -45,7 +45,7 @@ const Cta = () => {
         </h2>
         <p className="text-gray-400 mb-8 max-w-2xl mx-auto font-rubik">
           Join thousands of creators who are already using Aidita to transform
-          their video editing workflow
+          their video editing workflow. You dont want to miss out on this.
         </p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
