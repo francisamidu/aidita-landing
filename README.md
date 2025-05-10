@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aidita
+
+**Aidita** is an AI-powered video editor that makes creating professional-quality videos simple, intuitive, and accessible for everyone. With advanced artificial intelligence, Aidita streamlines editing, enhances creativity, and automates tedious tasks—so you can focus on your story, not the software.
+
+## Features
+
+- **AI Editing Suggestions:** Smart recommendations to speed up your workflow and improve your edits.
+- **High-Quality Exports:** Export videos in 720p, 4K, or even 8K depending on your plan.
+- **Cloud Storage:** Secure cloud storage for your video projects, with generous limits and unlimited options for enterprise users.
+- **Effects Library:** Access a rich library of basic and advanced effects, or create your own (Enterprise).
+- **Collaboration:** Team collaboration features for working with others, from small groups to large organizations.
+- **White-label Exports:** (Enterprise) Remove Aidita branding for client-ready output.
+- **Dedicated Support:** Priority and dedicated support for premium and enterprise users.
 
 ## Getting Started
 
-First, run the development server:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/francisamidu/aidita-landing.git
+   cd aidita-landing
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+4. Open [http://localhost:3000](http://localhost:3000) to view the app.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Plans & Pricing
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Aidita offers several plans:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Basic:** For individuals and small projects. Free for 1 month.
+- **Premium:** For professionals and content creators.
+- **Enterprise:** For teams and businesses with advanced needs.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+See the in-app pricing page for full details.
 
-## Learn More
+## Contributing
 
-To learn more about Next.js, take a look at the following resources:
+Contributions are welcome! Please open issues or pull requests for improvements, bug fixes, or new features.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[MIT](LICENSE)
