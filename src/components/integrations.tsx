@@ -118,7 +118,7 @@ const Integrations = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="w-full grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {integrations.map((integration, index) => (
             <motion.div
               key={index}
