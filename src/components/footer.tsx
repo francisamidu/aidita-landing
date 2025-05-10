@@ -40,10 +40,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer
-      id="contact"
-      className="bg-black border-t border-gray-800 py-12 px-4 sm:px-6 lg:px-8"
-    >
+    <footer id="contact" className="bg-slate-900/20 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <motion.div
@@ -87,7 +84,7 @@ const Footer = () => {
         </div>
 
         <motion.div
-          className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center"
+          className="mt-12 pt-8 border-t border-slate-900/40 flex flex-col md:flex-row justify-between items-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

@@ -5,15 +5,26 @@ import { ArrowRightIcon, PlayIcon } from "@heroicons/react/24/solid";
 import { motion } from "motion/react";
 import Image from "next/image";
 import aiditaImg from "@/assets/aidita-sample.jpg";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { useEffect, useMemo } from "react";
 
 const Hero = () => {
+  const mobile = useIsMobile();
+
+  const popup = useMemo(() => {
+    if (mobile) {
+      return "Aidita Beta out now!";
+    }
+    return "We just released the beta version of Aidita.";
+  }, [mobile]);
+
   return (
     <section className="checker-bg">
       <div className="pt-36 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto ">
         <div className="text-center flex flex-col items-center gap-6">
           <div className="border border-indigo-900 rounded-4xl py-1 px-6 flex items-center gap-2 w-fit bg-indigo-800/10 backdrop-blur-sm">
             <span className="text-indigo-500 font-bold">New!</span>
-            <span>We just released the beta version of Aidita</span> 🚀
+            <span>{popup}</span> 🚀
           </div>
           <motion.h1
             className="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight"
@@ -37,7 +48,7 @@ const Hero = () => {
           </motion.p>
 
           <motion.div
-            className="mt-10 flex items-center justify-center gap-4"
+            className="mt-10 flex flex-col md:flex-row items-center justify-center gap-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
@@ -48,7 +59,7 @@ const Hero = () => {
             </Button>
             <Button
               variant="outline"
-              className="text-lg px-8 py-6 group hover:bg-white hover:text-black"
+              className="w-full md:w-fit text-lg px-8 py-6 group hover:bg-white hover:text-black"
             >
               <PlayIcon className="mr-2 h-5 w-5 text-white group-hover:text-black" />
               Watch demo
